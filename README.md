@@ -1,24 +1,7 @@
-# README
+# Приложение "Шашлыки" на Ruby On Rails. Создано в учебных целях.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Приложение позволяет регистрироваться пользоватлям и создавать мероприятия.
 
-Things you may want to cover:
+Приложение находится в стадии разработки.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Автор:  [Куликов Дмитрий](https://github.com/Dimaon)
