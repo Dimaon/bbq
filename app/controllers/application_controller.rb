@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  helper_method :current_user_can_edit?
+  helper_method :current_user_can_edit?, :current_user_can_subscribe?
 
   protected
   def configure_permitted_parameters
@@ -18,5 +18,9 @@ class ApplicationController < ActionController::Base
       model.user == current_user ||
       (model.try(:event).present? && model.event.user == current_user)
     )
+  end
+
+  def current_user_can_subscribe?(model)
+    current_user != model.user
   end
 end
