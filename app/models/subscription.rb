@@ -3,6 +3,7 @@ class Subscription < ApplicationRecord
   belongs_to :user, optional: true
 
   validates :event, presence: true
+  validate :uniq_email
   
   unless 'user.present?'
   	validates :user_name, presence: true
@@ -26,5 +27,13 @@ class Subscription < ApplicationRecord
   	else
   		super
   	end
+	end
+
+  private
+  def uniq_email
+    if User.find_by(email: user_email).present?
+      errors.add(:user_email, I18n.t('error.email_exist'))
+    end
   end
+
 end
