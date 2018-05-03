@@ -54,7 +54,7 @@ ru:
     one: '%{count} ошибка'
     few: '%{count} ошибки'
     many: '%{count} ошибок'
-    email_exist: 'уже существует'
+    email_exist: 'уже существует1'
 
   comments:
     comment:
