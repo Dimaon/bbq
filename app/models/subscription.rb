@@ -6,11 +6,11 @@ class Subscription < ApplicationRecord
   validate :event_author_cant_subscribe
   validates :user_name, presence: true unless 'user.present?'
   validates :user, uniqueness: {scope: :event_id}, if: 'user.present?'
-  validates :user_email, presence: true, format: /\A[a-z\d_+.\-]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/ unless 'user.present?' || 'email_present_in_user?'
-  validates :user_email, uniqueness: {scope: :event_id}, unless: 'user.present?' || 'email_present_in_user?'
+  validates :user_email, presence: true, format: /\A[a-z\d_+.\-]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/ unless 'user.present?'
+  validates :user_email, uniqueness: {scope: :event_id}, unless: 'user.present?'
+  validate :email_present_in_user?
 
   def user_name
-    validate :email_present_in_user?
     user.present? ? user.name : super
   end
 
