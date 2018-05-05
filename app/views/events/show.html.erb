@@ -64,7 +64,10 @@
           </div>
         </div>
       <% end %>
-      <% if current_user_can_subscribe?(@event) %>
+      <% if 
+        # true 
+        current_user_can_subscribe?(@event) 
+        %>
         <div class="event-subscription-form">
           <h4>Я пойду:</h4>
           <div>

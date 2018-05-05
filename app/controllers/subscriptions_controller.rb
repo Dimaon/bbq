@@ -13,7 +13,6 @@ class SubscriptionsController < ApplicationController
     end
   end
 
-  # DELETE /subscriptions/1
   def destroy
     message = {notice: I18n.t('controllers.subscriptions.destroyed')}
 
@@ -31,12 +30,10 @@ class SubscriptionsController < ApplicationController
     @event = Event.find(params[:event_id])
   end
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_subscription
     @subscription = Subscription.find(params[:id])
   end
 
-  # Only allow a trusted parameter "white list" through.
   def subscription_params
     params.fetch(:subscription, {}).permit(:user_email, :user_name)
   end
