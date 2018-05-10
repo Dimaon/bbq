@@ -53,4 +53,16 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000'}
+
+  # TODO Удалить при деплое
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+      :address        => 'smtp.gmail.com',
+      :port           => '587',
+      :authentication => :plain,
+      :user_name      => 'dimatest86',
+      :password       => 'rt123123',
+      :enable_starttls_auto => true
+  }
 end

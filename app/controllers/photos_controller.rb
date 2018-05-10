@@ -67,7 +67,7 @@ class PhotosController < ApplicationController
 
     # проходимся по всему массиву email ов и отправляем почту
     all_emails.each do |mail|
-      EventMailer.comment(event, photo, mail).deliver_now
+      EventMailer.photo(event, photo, mail).deliver_now
     end
   end
 end

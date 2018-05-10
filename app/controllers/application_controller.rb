@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  helper_method :current_user_can_edit?, :current_user_can_subscribe?
+  helper_method :current_user_can_edit?, :current_user_can_subscribe?, :current_user_subscribed?
 
   protected
   def configure_permitted_parameters
@@ -21,6 +21,10 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user_can_subscribe?(model)
-    current_user != model.user
+    current_user != @event.subscribers.find_by(id: current_user.id)
+  end
+
+  def current_user_subscribed?
+    current_user == Subscription.find_by(user_name: current_user.id).user
   end
 end
