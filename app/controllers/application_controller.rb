@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user_can_subscribe?(model)
-    current_user != @event.subscribers.find_by(id: current_user.id)
+    current_user != model.subscribers.find_by(id: current_user.id) && model.user != current_user
   end
 
   def current_user_subscribed?
