@@ -24,3 +24,5 @@
 .idea
 public/uploads
 comment.txt
+
+/config/local_env.yml

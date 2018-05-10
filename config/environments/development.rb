@@ -52,6 +52,14 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+  # Подключаем локальный файл для хранения паролей и прочего
+  config.before_configuration do
+    env_file = File.join(Rails.root, 'config', 'local_env.yml')
+    YAML.load(File.open(env_file)).each do |key, value|
+      ENV[key.to_s] = value
+    end if File.exists?(env_file)
+  end
+
   config.action_mailer.default_url_options = { :host => 'localhost:3000'}
 
   # TODO Удалить при деплое
@@ -61,8 +69,8 @@ Rails.application.configure do
       :address        => 'smtp.gmail.com',
       :port           => '587',
       :authentication => :plain,
-      :user_name      => 'dimatest86',
-      :password       => 'rt123123',
+      :user_name      => ENV["GMAIL_USERNAME"],
+      :password       => ENV["GMAIL_PASS"],
       :enable_starttls_auto => true
   }
 end
