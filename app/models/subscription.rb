@@ -25,7 +25,7 @@ class Subscription < ApplicationRecord
       errors.add(:user_email, I18n.t('error.email_exist'))
     end
   end
-  # TODO
+
   def author_of_event_cant_subscribe_himself
     if user == event.user
       errors.add(:user_name, 'Нельзя подписать себя')
