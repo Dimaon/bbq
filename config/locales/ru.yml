@@ -89,3 +89,9 @@ ru:
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
+    photo:
+      title: 'Новое фото'
+      author: 'Автор'
+      event: 'Событие'
+      owner: 'Организатор'
+      datetime: 'Состоится'
