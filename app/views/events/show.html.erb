@@ -17,7 +17,7 @@
               <p><%= @event.description %></p>
             </div>
             
-            <div id="map" class="col-md" data-address="<%= @event.address %>" style="height: 300px; width: 40%" ></div>
+            <div id="map" class="col-md-5" data-address="<%= @event.address %>" style="height: 300px; padding: 10px" ></div>
           </div>
 
           <% if current_user_can_edit?(@event) %>
