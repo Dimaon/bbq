@@ -20,18 +20,24 @@
 
 А так же необходимо установить переменные окружения для работы:
 
-Amazon Storage
+Amazon S3 Storage:
+    
 S3_ACCESS_KEY
+    
 S3_BUCKET_NAME
+    
 S3_BUCKET_REGION
 
-SendGrid
+
+SendGrid:
+
 SENDGRID_USERNAME
+   
 SENDGRID_PASSWORD
 
 Для запуска локального сервера необходимо выполнить команду:
 
-rails s
+    rails s
 
 ## Демо
 [Приложение](https://bbqdimaon.herokuapp.com/) развернуто на heroku
