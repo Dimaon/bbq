@@ -1,6 +1,6 @@
-# Приложение "Шашлыки" на Ruby On Rails. Создано в учебных целях.
+# Приложение "Шашлыки" на Ruby On Rails.
 
-Проект реализован на Ruby on Rails (v5.1.6) в учебных целях.
+Проект реализован на Ruby on Rails v5.1.6
 
 ## Краткое описание
 
@@ -9,10 +9,10 @@
 В приложении использованы следующие технологии:
 
  - Отправка электронной почты через SendGrid
- - Загрузка и хранение файлов на Amazon storage (AWS)
+ - Загрузка и хранение файлов на Amazon S3 storage (AWS)
  - Обработка изображений на сервере (CarrierWave, rmagick)
 
-## Установка и запуск
+## Настройки и запуск
 Перед запуском приложения необходимо выполнить установку всех необходимых гемов и подготовку базы данных. Для этого в консоли в директории с приложением необходимо выполнить команды:
 
     bundle
@@ -20,18 +20,24 @@
 
 А так же необходимо установить переменные окружения для работы:
 
-Amazon Storage
-S3_ACCESS_KEY
-S3_BUCKET_NAME
-S3_BUCKET_REGION
+Amazon S3 Storage:
+    
+ - S3_ACCESS_KEY
+    
+ - S3_BUCKET_NAME
+    
+ - S3_BUCKET_REGION
 
-SendGrid
-SENDGRID_USERNAME
-SENDGRID_PASSWORD
+
+SendGrid:
+
+ - SENDGRID_USERNAME
+   
+ - SENDGRID_PASSWORD
 
 Для запуска локального сервера необходимо выполнить команду:
 
-rails s
+    rails s
 
 ## Демо
 [Приложение](https://bbqdimaon.herokuapp.com/) развернуто на heroku
