@@ -1,6 +1,6 @@
-# Приложение "Шашлыки" на Ruby On Rails. Создано в учебных целях.
+# Приложение "Шашлыки" на Ruby On Rails.
 
-Проект реализован на Ruby on Rails (v5.1.6) в учебных целях.
+Проект реализован на Ruby on Rails v5.1.6
 
 ## Краткое описание
 
@@ -22,18 +22,18 @@
 
 Amazon S3 Storage:
     
-S3_ACCESS_KEY
+ - S3_ACCESS_KEY
     
-S3_BUCKET_NAME
+ - S3_BUCKET_NAME
     
-S3_BUCKET_REGION
+ - S3_BUCKET_REGION
 
 
 SendGrid:
 
-SENDGRID_USERNAME
+ - SENDGRID_USERNAME
    
-SENDGRID_PASSWORD
+ - SENDGRID_PASSWORD
 
 Для запуска локального сервера необходимо выполнить команду:
 
