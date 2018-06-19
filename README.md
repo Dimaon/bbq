@@ -43,4 +43,4 @@ SendGrid:
 ## Демо
 [Приложение](https://bbqdimaon.herokuapp.com/) развернуто на heroku
 
-Автор:  [Куликов Дмитрий](https://github.com/Dimaon)
+Автор:  [Куликов Дмитрий]( [Куликов Дмитрий](https://dimaon.github.io/cv/))
